@@ -1,1 +1,1 @@
-console.log('asdfasd asdfasdfasdff')
+console.log('asdfasdf')
