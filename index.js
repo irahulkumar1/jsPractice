@@ -1,1 +1,2 @@
-console.log('asdfasdfasdfsd')
+const bmi = Date();
+console.log(bmi);
