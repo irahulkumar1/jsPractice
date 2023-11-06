@@ -6,3 +6,4 @@ console.log(bmi);
 //   console.log("bmi")
 // }
 // module.export = bmi;
+// asdsdfasfas
