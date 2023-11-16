@@ -26,7 +26,8 @@
 //     console.log( "conditions are ture allow to purchase ")
 // }
 
-// switch
+// switch case
+
 // switch (key){
 //     case value:
 //     break;
