@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon loops.js"
+    "start": "nodemon 08_objLoop.js"
   },
   "author": "",
   "license": "ISC",
