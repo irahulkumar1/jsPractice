@@ -20,4 +20,17 @@ rollNo.forEach((item) => {
   }
 });
 
-console.log(newNum);
+// console.log(newNum);
+
+// chaining
+const mynum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+
+const newNumbers = mynum.map((item)=> item * 10).filter((item)=>item > 20)
+
+// console.log(newNumbers)
+
+const myReduse = mynum.reduce((acc, currVal)=>{
+    console.log(`acc : ${acc} and currVal = ${currVal}`)
+    return acc + currVal;
+})
+console.log(myReduse)
