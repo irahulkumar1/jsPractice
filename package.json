@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon 09_forEach.js"
+    "start": "nodemon 10_filter.js"
   },
   "author": "",
   "license": "ISC",
