@@ -23,3 +23,11 @@ function checkGuess(){
 function displayMessage(){
 
 }
+
+function endGame(){
+
+}
+
+function startGame(){
+    
+}
