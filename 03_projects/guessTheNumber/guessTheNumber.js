@@ -13,6 +13,12 @@ let prevGuess = [];
 let numGuess = 1;
 let playGame = true;
 
+if (playGame){
+    submit.addEventListener('click', function(e){
+        e.preventDefault()
+    })
+}
+
 function validationGuess(){
 
 };
@@ -20,6 +26,10 @@ function validationGuess(){
 function checkGuess(){
 
 };
+
+function displayGuess(){
+
+}
 function displayMessage(){
 
 }
@@ -28,6 +38,6 @@ function endGame(){
 
 }
 
-function startGame(){
+function newGame(){
     
 }
