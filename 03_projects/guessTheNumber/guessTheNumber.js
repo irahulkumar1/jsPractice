@@ -43,19 +43,23 @@ function checkGuess(guess) {
   if (guess === randomNumber) {
     displayMessage(`You guessed it right`);
     endGame();
-  }else if ( guess < randomNumber){
-    displayMessage(`Number is Tooooo low`)
-  }else if ( guess > randomNumber){
-    displayMessage(`Number is Tooooo High`)
+  } else if (guess < randomNumber) {
+    displayMessage(`Number is Tooooo low`);
+  } else if (guess > randomNumber) {
+    displayMessage(`Number is Tooooo High`);
   }
   console.log(guess);
 }
 
 function displayGuess(guess) {
-    userInput.value = ''
+  userInput.value = "";
+  prevGuessSlot.innerHTML += `${guess}`;
+  numGuess++;
+  lastRemaining.innerHTML = `${11 - numGuess}`;
   console.log(guess);
 }
 function displayMessage(message) {
+  lowOrhign.innerHTML = `<h2>${message}</h2>`
   console.log(message);
 }
 
