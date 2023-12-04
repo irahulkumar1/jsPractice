@@ -5,7 +5,7 @@ const prevGuessSlot = document.querySelector(".guesses");
 const lastRemaining = document.querySelector(".lastResult");
 const lowOrhign = document.querySelector(".loOrHi");
 const resultParas = document.querySelector(".resultParas");
-
+const p = document.createElement('p')
 // console.log(useInput);
 
 let prevGuess = [];
@@ -67,7 +67,8 @@ function endGame() {
   userInput.value = '';
   userInput.setAttribute('disabled', '' );
   p.classList.add('button');
-  p.innerHTML = `<h2>Start new Game</h2>`
+  p.innerHTML = `<h2>Start new Game</h2>`;
+  startOver.appendChild(p)
 }
 
 function newGame() {}
