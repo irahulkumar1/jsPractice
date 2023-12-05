@@ -1,12 +1,12 @@
 let randomNumber = parseInt(Math.random() * 100 + 1);
 const submit = document.getElementById("subt");
 let userInput = document.querySelector("#guessField");
-const prevGuessSlot = document.querySelector(".guesses");
+let prevGuessSlot = document.querySelector(".guesses");
 const lastRemaining = document.querySelector(".lastResult");
 const lowOrhign = document.querySelector(".loOrHi");
 const startOver = document.querySelector(".resultParas");
-const p = document.createElement('p')
-// console.log(useInput);
+const p = document.createElement("p");
+
 
 let prevGuess = [];
 let numGuess = 1;
@@ -30,9 +30,10 @@ function validationGuess(guess) {
     alert("Please enter less than 100");
   } else {
     prevGuess.push(guess);
-    if (numGuess === 10) { 
+    if (numGuess === 10) {
       displayGuess(guess);
       displayMessage(`Game Over, random number was ${randomNumber}`);
+      endGame();
     } else {
       checkGuess(guess);
     }
@@ -48,7 +49,6 @@ function checkGuess(guess) {
   } else if (guess > randomNumber) {
     displayMessage(`Number is Tooooo High`);
   }
-  console.log(guess);
 }
 
 function displayGuess(guess) {
@@ -56,41 +56,35 @@ function displayGuess(guess) {
   prevGuessSlot.innerHTML += `${guess}, `;
   numGuess++;
   lastRemaining.innerHTML = `${11 - numGuess}`;
-
 }
 
 function displayMessage(message) {
-  lowOrhign.innerHTML = `<h2>${message}</h2>`
-  console.log(message);
+  lowOrhign.innerHTML = `<h2>${message}</h2>`;
 }
 
 function endGame() {
-  userInput.value = '';
-  userInput.setAttribute('disabled', '');
-  p.classList.add('button');
+  userInput.value = "";
+  userInput.setAttribute("disabled", "");
+  p.classList.add("button");
   p.innerHTML = `<h2 id='newGame'>Start new Game</h2>`;
   startOver.appendChild(p);
   playGame = false;
   newGame();
 }
 
-
 function newGame() {
-  const newGameButton = document.querySelector('#newGame');
-  newGameButton.addEventListener("click", function(e){
+  const newGameButton = document.querySelector("#newGame");
+  newGameButton.addEventListener("click", function (e) {
     randomNumber = parseInt(Math.random() * 100 + 1);
-    prevGuess=[];
+    prevGuess = [];
     numGuess = 1;
-    prevGuessSlot.innerHTML = '';
-    lastRemaining.innerHTML = '10'; // Reset remaining guesses
+    prevGuessSlot.innerHTML = "";
+    lastRemaining.innerHTML = "10"; // Reset remaining guesses
     userInput.removeAttribute("disabled");
 
-    
     if (startOver.contains(p)) {
       startOver.removeChild(p);
     }
-    
     playGame = true;
   });
 }
-
