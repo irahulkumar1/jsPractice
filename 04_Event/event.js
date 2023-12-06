@@ -1,0 +1,5 @@
+/* events
+event propagation
+event bubbling 
+event Capturing
+*/
