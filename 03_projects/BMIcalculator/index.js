@@ -1,4 +1,5 @@
 const form = document.querySelector("form");
+const backBtn = document.getElementById("backBtn");
 
 // form.document.addEventListener('submit', function(e){
 //  e.prevendDefault()
@@ -6,7 +7,10 @@ const form = document.querySelector("form");
 // console.log(form);
 
 // const form = document.querySelector("form");
-
+backBtn.addEventListener('click', function(){
+  window.history.back();
+ console.log("asdf")
+})
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   const height = parseInt(document.querySelector(".height").value);
