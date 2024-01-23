@@ -1,9 +1,10 @@
 var User = function(userName, courseCount){
   this.userName = userName;
     this.courseCount = courseCount;
-    this.getCoursecount = function(){
+    const getCoursecount = function(){
       console.log(`count is : ${this.courseCount}`)
     }
+    getCoursecount()
 }
 
 let rahul = new User("Rahul", 2)
