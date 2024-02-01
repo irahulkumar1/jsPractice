@@ -43,11 +43,24 @@ const dummyAgeData = [25, 30, 22, 35, 28, 18, 40, 26, 32, 21];
 // })
 // console.log(age30);
 
-const socialMediaCompanies = companies.filter((social => ( social.categories == 'Social Media' )));
-console.log(socialMediaCompanies);
+// const socialMediaCompanies = companies.filter((social => ( social.categories == 'Social Media' )));
+// console.log(socialMediaCompanies);
 
-const sb = companies.filter(function (product) {
-    if (product.categories == 'Product Based') {
-        console.log(product)
-    }
-})
+// const sb = companies.filter(function (product) {
+//     if (product.categories == 'Product Based') {
+//         console.log(product)
+//     }
+// })
+
+
+// map 
+
+// console.log(companies.map((name, index)=>{
+//     return `${name.name}, ${name.categories}`
+// }));
+
+// console.log(companies.map((name)=> `Name = ${name.name}, Start = ${name.start}`))
+
+// sort 
+const sortedAge = dummyAgeData.sort()
+console.log(sortedAge);
