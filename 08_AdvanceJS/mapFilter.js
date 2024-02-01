@@ -62,5 +62,21 @@ const dummyAgeData = [25, 30, 22, 35, 28, 18, 40, 26, 32, 21];
 // console.log(companies.map((name)=> `Name = ${name.name}, Start = ${name.start}`))
 
 // sort 
-const sortedAge = dummyAgeData.sort()
-console.log(sortedAge);
+// const sortedAge = dummyAgeData.sort((a,b)=> b-a)
+// console.log(sortedAge);
+
+// const sortCompanies = companies.sort((c1, c2) => (c1.start < c2.end ? 1 : -1))
+// console.log(sortCompanies)
+
+// reduce 
+
+let total = 0;
+// for (let i = 0; i < dummyAgeData.length; i++) {
+// total += dummyAgeData[i];
+// }
+// console.log(total)
+
+const sumAge = dummyAgeData.reduce(function(total, agData){
+    return total+ agData
+})
+console.log(sumAge)
