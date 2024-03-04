@@ -30,3 +30,22 @@ const promiseThree = new Promise((resolve, reject)=>{
 promiseThree.then((user)=>{
 console.log(user)
 });
+
+const promiseFour = new Promise ((resolve, reject)=>{
+    setTimeout(()=>{
+    let error = true;
+    if(!error){
+    resolve({user:"preteek", email: "prateek@mailc.com"})
+    }else{
+       reject("somthing went wrong")
+    }
+    console.log(!error)
+    },1000)
+});
+promiseFour
+.then((user)=>{
+console.log(user)
+resolve()
+}).catch((error) => {
+    console.log(error)
+})
